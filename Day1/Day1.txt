@@ -1,0 +1,44 @@
+
+  ASSIGNMENT-1
+~~~~~~~~~~~~~~~~
+
+1. Interact with temporary storage
+   Make interactive web pages
+   Interact with local storage
+   Sending request for data to server
+   Send request to server
+   work as an interface between server and user
+   
+ 2. JavaScriptCore is Apple's engine for its Safari browser. Other WebKit-based browsers also use it.
+ 
+ 
+  ASSIGNMENT-2
+~~~~~~~~~~~~~~~~
+
+1.Yes it is possible to diable javascript in browser.
+    1.Open the settings in the browser
+	2.In the security tab go to site settings.
+	3.In the scripting options enable/disable.
+	
+	
+2."Undefined" indicates that a variable has been declared but not given a value, while "Not defined" indicates that a variable does not exist.
+
+
+3. Java is a programming language that is object-oriented, network centric and multi-platform compatible, Java is utilised as a computing platform and was developed by the Sun Microsystem and released in 1995.Java can run on virtual machines. Here, the code for Java needs to be compiled.
+
+ JavaScript is a scripting language that is object based and helps to create web pages that are interactive. This language follows all the rules of the client side programming, so it functions on the web browser without any need for interference or resources from the web server. Developed by Netscape Inc, the code for JavaScript is completely text.
+ 
+
+Java is an OOP programming language, and it helps to create applications that function in a virtual machine or browser, while JavaScript is an OOP scripting language. Also, the JavaScript code runs on a browser only. 
+
+
+4. Different datatypes in javascript are:
+     1.Boolean type.
+	 2.Null type.
+	 3.Number
+	 4.String
+	 5.Array
+	 6.Undefined
+	 7.Object
+  
+  
