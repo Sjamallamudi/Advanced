@@ -1,0 +1,15 @@
+
+
+  ASSIGNMENT-1
+~~~~~~~~~~~~~~~~
+
+3. The onkeypress event occurs when the user presses a key (on the keyboard). The onkeypress event is not fired for all keys (e.g. ALT, CTRL, SHIFT, ESC) in all browsers.
+
+ The onkeyup event occurs when the user releases a key (on the keyboard).
+
+ The onkeydown event occurs when the user is pressing a key (on the keyboard).To detect only whether the user has pressed a key, use the onkeydown event instead, because it works for all keys.
+ 
+ The order of events related to the onkeypress event:
+   1.onkeydown
+   2.onkeypress
+   3.onkeyup
