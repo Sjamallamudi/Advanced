@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day3_3</title>
+</head>
+<body>
+    <h3>Online ticket booking</h3><br/>
+    <form action="login.php"   method="get">
+        Passenger Name : <input type="text" id="uid" name="uid"  onblur="fn_cursorLeave()" autofocus />
+        <span id="sp1" style="color:red;"></span><br/><br/>
+
+        Date of birth : <input type="date" id="dob" name="dob" /><br/><br/>
+
+        Email Id : <input type="email" id="eid" name="eid" /><br/><br/>
+        
+        Phone number : <input type="text" id="num" name="num" onblur="fn_number()"/>
+        <span id="sp2" style="color:red;"></span><br/><br/>
+        
+        Travel from : <input type="text" id="from" name="from" /><br/><br/>
+        
+        Destination : <input type="text" id="to" name="to" onblur="fn_compare()"/>
+        <span id="sp3" style="color:red;"></span><br/><br/>
+        
+        <br/>
+        <input type="submit" value="Find tickets" />
+    </form>
+    
+    <script>
+        function fn_cursorLeave(){
+            var userId  =  document.getElementById("uid").value;
+            if(userId.trim().length == 0){
+                document.getElementById("sp1").innerHTML =  "Passenger's name is required";
+                document.getElementById("uid").focus();
+            }
+            else{
+                document.getElementById("sp1").innerHTML =  "";
+            }
+        }
+
+        function fn_number(){
+            var pnum = document.getElementById("num").value;
+            if(pnum.length != 10){
+                document.getElementById("sp2").innerHTML =  "Enter correct Contact number";
+                document.getElementById("num").focus();
+            }
+            else{
+                document.getElementById("sp2").innerHTML =  "";    
+            }
+        }
+
+        function fn_compare(){
+            var source  =  document.getElementById("from").value;
+            var dest  =  document.getElementById("to").value;
+        
+            if(source == dest){
+                document.getElementById("sp3").innerHTML =  "Destination and starting station cannot be same";
+                document.getElementById("to").focus();
+            }
+            else{
+                document.getElementById("sp3").innerHTML =  ""; 
+            }
+        }
+
+    </script>
+
+</body>
+</html>
