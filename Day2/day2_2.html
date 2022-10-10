@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day2_2</title>
+    <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"  rel="stylesheet"  />
+
+</head>
+<body>
+    <h1 style="margin: 20px;">Assignment-1</h1><br/>
+    <input type="button"  value="While"  onclick="fn_while()" style="margin-left: 20px;" />
+    <input type="button"  value="Do..While"  onclick="fn_dowhile()" style="margin-left: 20px;" />
+    <input type="button"  value="For"  onclick="fn_for()" style="margin-left: 20px;" /><br/><br/>
+    <ul id="ulists"  style="border:2px solid rgb(29, 6, 6);  padding:30px; margin: 40px;"></ul>
+    <script>
+
+        function fn_while()
+        {	 
+            var listObj1 = document.getElementById("ulists");
+            var i = 1; 
+            var str = "";
+            
+            while(i<=8){
+                if (i%2 ==1) {
+                    str = str + '<li style=" color: green;">Welcome to JavaScript - ' + i+ '</li>';
+                }
+                else {
+                    str = str + '<li style=" color: blue;">Welcome to JavaScript - ' + i+ '</li>';
+                }					 
+                i++;
+            }
+            
+            listObj1.innerHTML= str;   
+        }
+        
+
+        function fn_dowhile()
+        {	 
+            var listObj1 = document.getElementById("ulists");        
+            var i = 0; 
+            var str = "";
+            
+            do{
+                if (i%2 ==1) {
+                    str = str + '<li style=" color: green;">Welcome to JavaScript - ' + i+ '</li>';
+                }
+                else {
+                    str = str + '<li style=" color: blue;">Welcome to JavaScript - ' + i+ '</li>';
+                }							 
+                i = i+1
+            }while(i <= 8);
+        
+            listObj1.innerHTML= str;
+        }
+        
+        
+        function fn_for()
+        {	 
+            var listObj1 = document.getElementById("ulists");				
+            var str =  "";				
+            for(var i = 10; i>=1; i--){
+                if (i%2 ==1) {
+                    str = str + '<li style=" color: green;">Welcome to JavaScript - ' + i+ '</li>';
+                }
+                else {
+                    str = str + '<li style=" color: blue;">Welcome to JavaScript - ' + i+ '</li>';
+                }		
+            } 	
+
+            listObj1.innerHTML= str;				
+        }
+    </script> 
+</body>
+</html>

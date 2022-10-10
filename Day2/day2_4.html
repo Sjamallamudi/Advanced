@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day2_4</title>
+    <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"  rel="stylesheet"  />
+    <style>
+        table{
+            border-collapse: separate;
+            border-spacing: 5px;
+        }
+
+        th{
+            background-color: skyblue;
+        }
+
+        #tab1, td{
+            padding: 5px;
+            text-align: center;  
+        }
+    </style>
+</head>
+<body>
+    <h1> Dynamic Operations on Arrays in JS</h1><br/>
+    <input type="button"  value="Show Data"  onclick="fn_getdata()" style="margin-left: 20px;" /><br/><br/>
+
+    <table id="tab1" style="margin: 20px;">
+        <tr>
+            <th>course</th>
+            <th>course</th>
+            <th>course</th>
+            <th>course</th>
+        </tr>
+    </table>
+
+    <script>
+        var i=0;
+        var arr = ["HTML5", "CSS3", "jQuery", "angularjs", "Bootstrap","HTML5", "CSS3", "jQuery", "angularjs", "Bootstrap", "HTML5", "CSS3", "jQuery", "angularjs", "Bootstrap"];
+        var x = 0;
+        function fn_getdata(){
+            var tabObj1 = document.getElementById("tab1");
+            tabObj1.style.border = "2px solid black";
+            for(i=0; i<4; i++){
+                var row = tabObj1.insertRow(-1);
+
+                for(j=1; j<5; j++){
+                    var cell1 = row.insertCell(-1);
+                    cell1.innerHTML = arr[x];
+                    x++;
+
+                    if (x==16) {
+                        cell1.innerHTML = "";                        
+                    }
+                }
+            } 
+        }
+
+    </script>
+
+</body>
+</html>

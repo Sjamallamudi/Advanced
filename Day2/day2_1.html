@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day2_1</title>
+</head>
+<body>
+    <h1>Assignment-1</h1>	
+    <input type="button"  value="While"  onclick="fn_while()"  />
+    <input type="button"  value="Do..While"  onclick="fn_dowhile()"  />
+    <input type="button"  value="For"  onclick="fn_for()"  />
+    <ul id="ulists"  style="border:2px solid rgb(29, 6, 6);  padding:30px;"></ul>
+    <script>
+
+        function fn_while()
+        {	 
+            var listObj1 = document.getElementById("ulists");
+            var i = 1; 
+            var str = "";
+            
+            while(i<=5){
+                str = str + "<li>Welcome to JavaScript - " + i+ "</li>";					 
+                i++;
+            }
+            
+            listObj1.innerHTML= str;   
+        }
+        
+
+        function fn_dowhile()
+        {	 
+            var listObj1 = document.getElementById("ulists");        
+            var i = 0; 
+            var str = "";
+            
+            do{
+                str = str + "<li>Welcome to JavaScript - " + i+ "</li>";					 
+                i = i+1
+            }while(i <= 5);
+        
+            listObj1.innerHTML= str;
+        }
+        
+        
+        function fn_for()
+        {	 
+            var listObj1 = document.getElementById("ulists");				
+            var str =  "";				
+            for(var i = 5; i>=1; i--){
+                str = str  + "<li>Welcome to JavaScript - " + i+ "</li>";	
+            } 	
+
+            listObj1.innerHTML= str;				
+        }
+    </script> 
+</body>
+</html>

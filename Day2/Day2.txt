@@ -1,0 +1,39 @@
+
+
+  ASSIGNMENT-1
+~~~~~~~~~~~~~~~~
+
+1. JavaScript has three kind of popup boxes: Alert box, Confirm box, and Prompt box.
+
+ Alert box is often used if you want to make sure information comes through to the user.When an alert box pops up, the user will have to click "OK" to proceed.
+ Syntax:  window.alert("sometext");
+ 
+ A confirm box is often used if you want the user to verify or accept something. When a confirm box pops up, the user will have to click either "OK" or "Cancel" to proceed. If the user clicks "OK", the box returns true. If the user clicks "Cancel", the box returns false.
+ Syntax:  window.confirm("sometext");
+
+ A prompt box is often used if you want the user to input a value before entering a page.When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an input value.If the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null.
+ Syntax:  window.prompt("sometext","defaultText");
+ 
+ 
+ 
+ 
+2. "BOM" stands for browser object model and it allows JavaScript to interact with the browser. It is a browser-specific convention referring to all the objects exposed by the web browser. The object of window represents a browser window and all its corresponding features.
+
+  DOM means Document Object model. When the webpage is loaded the browser creates a document object model for the page.All the objects are arranged as tree structure,  which represents the contents of the page. You can manipulate it using javascript.
+
+  BOM means Browser Object Model.window object is supported by all browsers it represents the window browser.All global JavaScript objects, functions, and variables automatically become members of the window object.
+  
+  
+  
+  
+ 5. The push() method adds one or more elements to the end of an array and returns the new length of the array.
+ 
+    The pop() method removes the last element from an array and returns that value to the caller. If you call pop() on an empty array, it returns undefined . Array.prototype.shift() has similar behavior to pop() , but applied to the first element in an array.
+	
+	The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.The splice() method adds and/or removes array elements.The splice() method overwrites the original array.
+    Syntax:  array.splice(index, howmany, item1, ....., itemX);
+	
+	
+	
+	
+
