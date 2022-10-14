@@ -1,0 +1,12 @@
+
+
+  ASSIGNMENT-1
+~~~~~~~~~~~~~~~~~
+
+
+1.  
+
+
+2.  To destructure an array in JavaScript, we use the square brackets [] to store the variable name which will be assigned to the name of the array storing the element.
+ex: const [var1, var2, ...] = arrayName;
+

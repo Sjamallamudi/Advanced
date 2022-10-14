@@ -1,0 +1,96 @@
+<html>
+	<head></head>
+	<body style="margin: 30px;">
+		<h3>Advanced JavaScript Programming </h3>
+		<hr/>
+		Search value: <input type="text" id="tb1" name="tb1" />
+        <input type="button"   value="Find by EmpNo"   onclick="fn_byempno()"  />
+		<input type="button"   value="Find by job"   onclick="fn_byjob()"  />
+	 
+		<br/><br/>
+		<table  id="table1"  Border="2"  width="500"  cellpadding="10" cellspacing="0">
+			<tr>
+					<th>EmpNo</th>
+					<th>Employee Name</th>
+					<th>Job</th>
+                    <th>Salary</th>
+                    <th>DeptNo</th>
+			</tr>
+		</table>
+	 
+		<script>	
+            
+			var  EmpArray =   [
+				{Eno : 1, sname  : "Scott", Job :  "Manager",    Salary: "50000", DeptNo: "5" },
+				{Eno : 2, sname  : "Smith", Job :  "Analyst",    Salary: "28000", DeptNo: "3" },
+				{Eno : 3, sname  : "Jhon",  Job :  "Manager",    Salary: "52000", DeptNo: "2" },
+				{Eno : 4, sname  : "Meera", Job :  "Consultant", Salary: "65000", DeptNo: "4" },
+				{Eno : 5, sname  : "Amir",  Job :  "Accountant", Salary: "35000", DeptNo: "2" },
+				{Eno : 6, sname  : "Ethan", Job :  "Analyst",    Salary: "50000", DeptNo: "4" },
+				{Eno : 7, sname  : "Megan", Job :  "Analyst",    Salary: "40000", DeptNo: "1" }
+			];
+		    
+            function fn_byempno(){		
+            var tableObj =  document.getElementById("table1");	
+            var textObj = document.getElementById("tb1");
+        
+            var resultObj = EmpArray.find(Employee => Employee.Eno == textObj.value );
+            
+           // alert("Rows Count: " +  tableObj.rows.length);
+            let count = tableObj.rows.length;
+            for(let j=1; j< count; j++){
+                tableObj.deleteRow(-1);
+             //   alert("j = " + j);
+            }   
+
+            var  row1 =  tableObj.insertRow(-1);			
+
+            var  cell1 =  row1.insertCell(-1);
+            var  cell2 =  row1.insertCell(-1);
+            var  cell3 =  row1.insertCell(-1);
+            var  cell4 =  row1.insertCell(-1);
+            var  cell5 =  row1.insertCell(-1);
+            
+            cell1.innerHTML = resultObj.Eno;						
+            cell2.innerHTML = resultObj.sname;						
+            cell3.innerHTML = resultObj.Job;
+            cell4.innerHTML = resultObj.Salary;
+            cell5.innerHTML = resultObj.DeptNo;             
+            
+           // alert(tableObj.rows.length);
+        }
+
+            function fn_byjob(){		
+                var tableObj =  document.getElementById("table1");	
+                var textObj = document.getElementById("tb1");
+               
+                var resultArr = EmpArray.filter(Employs => Employs.Job == textObj.value);              
+
+                //alert(tableObj.rows.length);
+                let count = tableObj.rows.length;
+                for(let j=1; j< count; j++){
+                    tableObj.deleteRow(-1);
+                   // alert(j);
+                }   
+
+                for(let  item  of  resultArr){
+                var  row1 =  tableObj.insertRow(-1);			
+    
+                var  cell1 =  row1.insertCell(-1);
+                var  cell2 =  row1.insertCell(-1);
+                var  cell3 =  row1.insertCell(-1);
+                var  cell4 =  row1.insertCell(-1);
+                var  cell5 =  row1.insertCell(-1);
+                
+                cell1.innerHTML = item.Eno;						
+                cell2.innerHTML = item.sname;						
+                cell3.innerHTML = item.Job;
+                cell4.innerHTML = item.Salary;
+                cell5.innerHTML = item.DeptNo;
+         
+                }	
+            }
+
+		</script>
+	</body>
+</html>
