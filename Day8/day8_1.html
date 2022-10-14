@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day8_1</title>
+</head>
+<body style="margin-left: 50px;">
+    
+    <h1> JQuery Programming  </h1><br/><br/>
+
+    <fieldset>
+        <legend style="font-size: 40px; font-weight: bold;">Check-Out</legend><br/>
+        Select Product: 
+        <select id="s1">
+            <option id="op1">Instant Coffee</option>
+            <option id="op2">Milk</option>
+            <option id="op3">Cool Drinks</option>
+            <option id="op4">Oil</option>
+        </select><br/><br/>
+
+        Price: <input type="text" id="t1" name="t1" ><br/><br/>
+        Quantity: <input type="text" id="t2" name="t2" ><br/><br/>
+        <input type="button" onclick="fn_getPrice()" value="Get Total"><br/><br/>
+    </fieldset>
+
+    <h2 id="result"></h2>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script>
+
+        function fn_getPrice(){
+            let  x  = 	$("#t1").val();
+            let  y  = 	$("#t2").val();
+            let  z = parseInt(x) *  parseInt(y);
+			$("#result").html("Total Amount  : "  +  z);
+        }
+
+        // $(document).ready( function fn_getPrice(){
+        //     let  x  = 	$("#t1").val();
+        //     let  y  = 	$("#t2").val();
+        //     let  z = parseInt(x) *  parseInt(y);
+		// 	$("#result").html("Total Amount  : "  +  z);
+        // });
+
+    </script>
+
+</body>
+</html>

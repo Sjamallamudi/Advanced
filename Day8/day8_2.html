@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day8_2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        #timer{
+            background-color: black;
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+            height: 200px;
+            width: 500px;
+            align-items: center;
+            padding: 60px;
+            margin-left: 400px;
+        }
+    </style>
+
+</head>
+<body style="text-align: center;">
+    <br/><br/>
+    <h1> JQuery Timer </h1><br/><br/>
+
+    <button class="btn btn-success" id="st">Start</button>&nbsp;
+    <button class="btn btn-danger" id="cl" style="margin-left: 20px;">Clear</button><br/><br/><br/>
+
+    <p id="timer"><span id="hrs">00</span>:<span id="min">00</span>:<span id="sec">00</span></p><br/><br/>
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            var mytimer;
+
+            $("#st").click( function(){
+                
+                sec = 0; 
+                min = 0;
+                hrs = 0;
+                mytimer = setInterval( function(){
+                    sec++
+                    if (sec< 10) {
+                        $("#sec").html("0" + sec);
+                    } else {
+                        $("#sec").html(sec);
+                    }
+
+                    if (sec==60) {
+                        min++;
+                        if (min <10) {
+                            $("#min").html("0" + min);
+                        } else {
+                            $("#min").html(min);
+                        }
+                        sec = 0;
+                    }
+                    
+                    if (min==60) {
+                        hrs++;
+                        if (hrs <10) {
+                            $("#hrs").html("0" + hrs);
+                        } else {
+                            $("#hrs").html(hrs);
+                        }
+                        min = 0;
+                    }
+
+                }, 10);
+
+                //$("#cl").click(clearInterval(myinterval));
+            });
+
+            $("#cl").click( function(){
+            
+                clearInterval(mytimer);
+                $("#hrs").html("00");
+                $("#min").html("00");
+                $("#sec").html("00");
+                //  $("#timer").html("00:00:00");
+               
+             });
+            
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+
+1.  We can divide CSS selectors into five categories:
+
+--->Simple selectors (select elements based on name, id, class)
+    => Element selectors. Ex: p{......}
+    => Id selectors. Ex: #p{......}
+    => Class selectors. Ex: .p{......}
+    => Universal selector. Ex: *{......}
+    => Grouping selectors. Ex: p, div{......}
+
+--->Combinator selectors (select elements based on a specific relationship between them)
+    => descendant selector (space).  Ex: div p{....}
+    =>child selector (>).  Ex: div > p{....}
+    =>adjacent sibling selector (+).  Ex: div + p{....}
+    =>general sibling selector (~).  Ex: div ~ p{....}
+
+--->Pseudo-class selectors (select elements based on a certain state)
+     Ex: div:hover{....} / div:active{....}
+
+--->Pseudo-elements selectors (select and style a part of an element)
+    A CSS pseudo-element is used to style specified parts of an element.For example, it can be used to:Style the first letter, or line, of an element, Insert content before, or after, the content of an element.
+     Ex: div::firstline{....} 
+
+--->Attribute selectors (select elements based on an attribute or attribute value)
+
+
+2.
+--->A CDN is a network of servers that distributes content from an “origin” server throughout the world by caching content close to where each end user is accessing the internet via a web-enabled device. 
+--->The content they request is first stored on the origin server and is then replicated and stored elsewhere as needed.
+
+
+
+3.
+--->The this Keyword is a reference to DOM elements of invocation. We can call all DOM methods on it.
+
+---> $() is a jQuery constructor and in $(this), we are just passing this as a parameter so that we can use the jQuery function and methods.
+
+--->Query calls the callback using apply() to bind this.
+
+--->Calling jQuery a second time (which is a mistake) on the result of $(this) returns an new jQuery object based on the same selector as the first one.
+
+
+4.
+--->A page can't be manipulated safely until the document is "ready." jQuery detects this state of readiness for you, since it is a good place to have all other jQuery events and functions. The ready() method specifies what happens when a ready event occurs.
+
+--->Code included inside $( document ).ready() will only run once the page Document Object Model (DOM) is ready for JavaScript code to execute. 
+
+--->Code included inside $( window ).on( "load", function() { ... }) will run once the entire page (images or iframes), not just the DOM, is ready.
+
+
+6.
+--->The one() method attaches one or more event handlers for the selected elements, and specifies a function to run when the event occurs.
+
+--->When using the one() method, the event handler function is only run ONCE for each element.
+
+--->syntax: $(selector).one(event,data,function)
+
+
+7.
+--->jQuery selector $("input:text") will select all the textboxes in the current document and $("input:text").val("") will clear all the textbox value.
