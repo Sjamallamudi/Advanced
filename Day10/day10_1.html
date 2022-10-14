@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day10_1</title>
+    <style>
+
+        body{
+            text-align: center;
+        }
+
+        #bt1, #bt2, #bt3{
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 2px;
+            height: 30px;
+            width: 30px;
+        }
+        .bt1{
+            font-weight: bold;
+            padding: 15px;
+            background-color: rgb(18, 18, 18);
+            color: white;
+            margin: 30px;
+        }
+
+        .bt2{
+            font-style: italic;
+            padding: 15px;
+            background-color: rgb(18, 18, 18);
+            color: white;
+            margin: 30px;            
+        }
+
+        .bt3{
+            text-decoration: underline;
+            padding: 15px;
+            background-color: rgb(18, 18, 18);
+            color: white;
+            margin: 30px;
+        }
+
+        .bt{
+            background-color: black;
+            color: white;
+        }
+
+        p{
+            border: 2px solid black;
+            text-align: justify;
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <br/><br/>
+    <input type="button" id="bt1" value="B">
+    <input type="button" id="bt2" value="I">
+    <input type="button" id="bt3" value="U"><br/><br/>
+
+    
+
+    <P id="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis iusto veniam dolores omnis, necessitatibus nisi pariatur quisquam dolorum magni laudantium ad dolore rerum iste aliquam nemo hic porro laboriosam nostrum odio perspiciatis aut, dicta minima quia? Nihil necessitatibus voluptatem delectus? Voluptatibus eos ipsum illum dolorem atque recusandae eum possimus quidem molestias eveniet, porro perferendis quos voluptates pariatur beatae, error placeat ad architecto, sapiente accusamus vel asperiores autem iusto praesentium! Fuga assumenda aperiam veritatis officia exercitationem ad autem vitae iure dolorem minus, repellendus, aut quis et doloremque modi odit expedita dicta illo voluptas! At nostrum autem, rerum nulla error corporis labore!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis iusto veniam dolores omnis, necessitatibus nisi pariatur quisquam dolorum magni laudantium ad dolore rerum iste aliquam nemo hic porro laboriosam nostrum odio perspiciatis aut, dicta minima quia? Nihil necessitatibus voluptatem delectus? Voluptatibus eos ipsum illum dolorem atque recusandae eum possimus quidem molestias eveniet, porro perferendis quos voluptates pariatur beatae, error placeat ad architecto, sapiente accusamus vel asperiores autem iusto praesentium! Fuga assumenda aperiam veritatis officia exercitationem ad autem vitae iure dolorem minus, repellendus, aut quis et doloremque modi odit expedita dicta illo voluptas! At nostrum autem, rerum nulla error corporis labore!</P>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            
+            $("#bt1").click(function(){
+                $("p").toggleClass("bt1");
+                $("#bt1").toggleClass("bt");
+            });
+            $("#bt2").click(function(){
+                $("p").toggleClass("bt2");
+                $("#bt2").toggleClass("bt");
+            });
+            $("#bt3").click(function(){
+                $("p").toggleClass("bt3");
+                $("#bt3").toggleClass("bt");
+            });
+        });
+    </script>
+
+</body>
+</html>
