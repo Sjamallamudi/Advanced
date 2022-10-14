@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day7_3</title>
+</head>
+<body style="margin: 50px;">
+    
+    <h1>Advanced JavaScript Programming -- Async/await </h1>
+    <hr/>
+    Search value: <input type="text" id="tb1" name="tb1" onchange="fn_getdata()"/>
+    <input type="button"   value="Find by EmpNo"   onclick="fn_byempno()"  />
+
+    <br/><br/>
+    <table  id="table1"  Border="2"  width="500"  cellpadding="10" cellspacing="0">
+        <tr>
+            <th>EmpNo</th>
+            <th>Employee Name</th>
+            <th>Salary</th>
+            <th>Age</th>
+            <th>Profile Image</th>
+        </tr>
+    </table>
+
+    <p id="p1"></p>
+
+    <script>
+
+        async function fn_getdata(){
+            var textObj = document.getElementById("tb1").value;
+            let url = "https://dummy.restapiexample.com/api/v1/employee/" + textObj;
+            fetch(url).then((response) => {
+
+                if(true)
+					{
+						return  Promise.resolve("Employee details are: "); 
+					}
+					else
+					{
+						return  Promise.reject ("Employee not found");
+					}
+            });
+        }
+
+        async function fn_byempno(){
+            var tableObj =  document.getElementById("table1");
+
+            let count = tableObj.rows.length;
+            for(let j=1; j< count; j++){
+                tableObj.deleteRow(-1);
+            }   
+
+            try {
+                var resultObj = await response;
+
+                var  row1 =  tableObj.insertRow(-1);			
+
+                var  cell1 =  row1.insertCell(-1);
+                var  cell2 =  row1.insertCell(-1);
+                var  cell3 =  row1.insertCell(-1);
+                var  cell4 =  row1.insertCell(-1);
+                var  cell5 =  row1.insertCell(-1);
+                
+                cell1.innerHTML = resultObj.id;						
+                cell2.innerHTML = resultObj.employee_name;						
+                cell3.innerHTML = resultObj.employee_salary;
+                cell4.innerHTML = resultObj.employee_age;
+                cell5.innerHTML = resultObj.profile_image;   
+            } 
+            catch (error) {
+                
+            }
+        }
+    
+    </script>
+
+</body>
+</html>

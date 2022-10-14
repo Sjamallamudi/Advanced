@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day7_1</title>
+    <style>
+        #p1{
+            border: 2px;
+            margin: 40px;
+            margin-top: 100px;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="p1" ></p>
+
+    <script>
+
+        var paraObj = document.getElementById("p1");
+
+        const Promise1 = new Promise((resolve, reject) =>{
+
+            number = Math.floor(Math.random() * 50);
+            paraObj.innerHTML = number;        
+
+            if (number % 5 ==0) {
+                resolve(number);
+            } else {
+                reject(number);
+            }
+        } );
+
+        Promise1.then( (response) =>{
+            paraObj.innerHTML = response + ' - Number is divisible by 5';
+        })
+        .catch( (errorResponse ) =>{
+            paraObj.innerHTML = errorResponse + ' - Number is not divisible by 5';
+        })
+
+    </script>
+
+</body>
+</html>

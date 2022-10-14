@@ -1,0 +1,12 @@
+1. 
+---> The setInterval() method calls a function at specified intervals (in milliseconds). This method returns an interval ID which uniquely identifies the interval. The method continues calling the function until clearInterval() is called, or the window is closed.
+
+--->To execute the function only once, use the setTimeout() method instead.
+
+--->The setTimeout() method calls a function after a time interval (number of milliseconds). The method is executed only once. Use the clearTimeout() method to prevent the function from starting.
+
+
+
+2.  
+--->A callback is a function passed as an argument to another function. This technique allows a function to call another function. A callback function can run after another function has finished.
+--->Callbacks make sure that a function is not going to run before a task is completed but will run right after the task has completed. It helps us develop asynchronous JavaScript code and keeps us safe from problems and errors.
