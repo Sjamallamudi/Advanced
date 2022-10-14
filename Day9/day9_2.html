@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day9_2</title>
+    <style>
+        img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: 1px solid gray;
+        }
+        td{
+            text-align: center;
+            height: 110px;
+            width: 110px;
+            position: relative;
+        }
+        body{
+            text-align: center;
+        } 
+        #table{
+            margin-left: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Effects Using JQuery</h1>
+
+    <table id="table" >
+        <tr>
+            <td><img class="img1" src="Images/Image1.jpg"></td>
+            <td><img class="img2" src="Images/Image2.jpg"></td>
+            <td><img class="img1" src="Images/Image3.jpg"></td>
+            <td><img class="img2" src="Images/Image4.jpg"></td>
+        </tr>
+        <tr>
+            <td><img class="img2" src="Images/Image5.jpg"></td>
+            <td><img class="img1" src="Images/Image6.jpg"></td>
+            <td><img class="img2" src="Images/Image1.jpg"></td>
+            <td><img class="img1" src="Images/Image2.jpg"></td>
+        </tr>
+        <tr>
+            <td><img class="img1" src="Images/Image3.jpg"></td>
+            <td><img class="img2" src="Images/Image4.jpg"></td>
+            <td><img class="img1" src="Images/Image5.jpg"></td>
+            <td><img class="img2" src="Images/Image6.jpg"></td>
+        </tr>
+        <tr>
+            <td><img class="img2" src="Images/Image1.jpg"></td>
+            <td><img class="img1" src="Images/Image2.jpg"></td>
+            <td><img class="img2" src="Images/Image3.jpg"></td>
+            <td><img class="img1" src="Images/Image4.jpg"></td>
+        </tr>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            // setInterval(function(){
+            //     $("#table tr:even td:even").toggle(2000);
+            //     $("#table tr:odd td:odd").toggle(2000);
+            //     setTimeout(function(){ $("#table tr:even td:odd").toggle(2000);
+            //         $("#table tr:odd td:even").toggle(2000)
+            //     }, 2000);
+            // }, 2000)
+        // setInterval(function(){
+        //     $(".img1").fadeToggle(2000);
+        //     setTimeout(function(){$(".img2").fadeToggle(2000);}, 2000)
+        // }, 2000);
+        // })
+
+        setInterval(function(){
+            $(".img1").toggle(2000);
+            setTimeout(function(){$(".img2").toggle(2000);}, 2000)
+        }, 2000)
+        })
+
+    </script>
+</body>
+</html>

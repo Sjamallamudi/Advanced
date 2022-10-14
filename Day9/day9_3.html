@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day9_3</title>
+</head>
+<body style="text-align: center;">
+    <h1>Table Traversing</h1>
+    <br/><br/>
+    <table id="table1" Border="2" width="600px" style="margin-left: 300px;">
+        <tr>
+            <th>Product Name</th>
+            <th>Unit Price</th>
+            <th>Units In Stock</th>
+        </tr>
+        <tr>
+            <td>Printer</td>
+            <td>2500.00</td>
+            <td id="qty">20</td>
+        </tr>
+        <tr>
+            <td>4GB-RAM</td>
+            <td>1200.00</td>
+            <td id="qty">23</td>
+        </tr>
+        <tr  >
+            <td>1TB Samsung HDD</td>
+            <td>4500.00</td>
+            <td id="qty">0</td>
+        </tr>
+        <tr>
+            <td>32-GB Kingston USB</td>
+            <td>800.00</td>
+            <td id="qty">35</td>
+        </tr>
+        <tr>
+            <td>Wifi Router</td>
+            <td>1800.00</td>
+            <td id="qty">0</td>
+        </tr>  
+        <tr  >
+            <td>1TB Samsung HDD</td>
+            <td>4500.00</td>
+            <td id="qty">0</td>
+        </tr>
+        <tr>
+            <td>32-GB Kingston USB</td>
+            <td>800.00</td>
+            <td id="qty">35</td>
+        </tr>
+        <tr>
+            <td>Wifi Router</td>
+            <td>1800.00</td>
+            <td id="qty">0</td>
+        </tr>  
+     </table> 
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+           
+            $("#table1 tr").each(function(){
+
+                if($(this).children().last().text()=="0"){
+                    $(this).css("background-color", "pink");
+                }
+                else{
+                    $(this).css("background-color", "lightgreen");
+                }
+            })
+            $("#table1  tr:first").css("background-color",  "skyblue");
+			$("#table1  tr:last").css("background-color",  "gray");
+
+        });
+    </script>
+             
+</body>
+</html>

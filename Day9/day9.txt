@@ -1,0 +1,18 @@
+
+1.
+---> First, we create a table using <table> tag and add a button containing btn id. When a user clicks on the button, then the jQuery function is called. The jQuery function removes all the rows except the first one using the remove() method.
+--->syntax: $("#myTable").find("tr:gt(0)").remove();
+            $("#myTable td").parent().remove();
+            $("#myTable").not(":first").remove();
+            $("#myTable tr:not(:first)").remove();
+
+
+
+5.
+--->The prev() method returns the previous sibling element of the selected element.The prev() method returns the previous sibling element of the selected element. 
+Note: ->prevAll() - returns all previous sibling elements of the selected element. 
+      ->prevUntil() - returns all previous sibling elements between two given arguments.
+
+---> The next() method returns the next sibling element of the selected element. This method traverse forward along the next sibling of DOM elements.
+Note: ->nextAll() - returns all next sibling elements of the selected element
+      ->nextUntil() - returns all next sibling elements between two given arguments.
