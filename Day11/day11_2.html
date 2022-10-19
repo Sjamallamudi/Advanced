@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day11_2</title>
+    <style>
+        td{
+            height: 35px;
+            width: 200px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body style="font-weight: bold; margin-left: 100px;">
+    <br/>
+    <input type="button" id="bt1" value="Get Data"/><br/><br/>
+    <table id="tab" Border="2">
+        <tr>
+            <td>Card Number</td>
+            <td id="td1"></td>
+        </tr>
+        <tr>
+            <td>Card Holder</td>
+            <td id="td2"></td>
+        </tr>
+        <tr>
+            <td>Card Type</td>
+            <td id="td3"></td>
+        </tr>
+        <tr>
+            <td>Validity</td>
+            <td id="td4"></td>
+        </tr>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script>
+        let custObj={ cardnumber : 1234567812345678, cname : "narasimHa rao", cardtype: "visa", exmonth : 12, exyear: 2023};
+
+        $(document).ready(function(){
+            $("#bt1").click(function(){
+                $("#td1").html("**** **** **** "+ (String(custObj.cardnumber).slice(12)));
+                const words = custObj.cname.split(" ");
+                for (let i = 0; i < words.length; i++) {
+                    words[i] = words[i][0].toUpperCase() + words[i].substr(1).toLowerCase();
+                }
+                $("#td2").html(words.join(" "));
+                $("#td3").html(custObj.cardtype.toUpperCase());
+                let cdate = new Date();
+                cdate.setMonth(custObj.exmonth);
+                let a = cdate.toLocaleDateString('en-US', {month: "short"});
+                $("#td4").html(a+ " " + custObj.exyear);
+            })
+        })
+
+    </script>
+
+</body>
+</html>

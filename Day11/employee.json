@@ -1,0 +1,8 @@
+{
+	"emps":
+	[
+	 {"ename": "Ram" , "enum": 2435674, "job": "Assistant", "deptno": 23},
+	 {"ename": "Raju", "enum": 3457643, "job": "Auditting", "deptno": 34 },
+	 {"ename": "Samantha", "enum":4357654, "job": "CFO", "deptno": 3}
+	]
+}
