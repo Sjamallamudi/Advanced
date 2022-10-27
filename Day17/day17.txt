@@ -1,0 +1,13 @@
+1.
+--->A given Angular workspace contains several TypeScript configuration files. At the root tsconfig. json file specifies the base TypeScript and Angular compiler options that all projects in the workspace inherit.
+
+
+2.We can do this by adding another variable to our ngFor expression and making it equal to index, like:
+--->We create another variable called 'i' and make it equal to the special keyword index.
+--->We can use the variable 'i' just like we can use the variable person in our template.
+ex: <ul> (1)
+        <li *ngFor="let item of array; let i = index"> (1)
+            {{ i + 1 }} - {{ item }} (2)
+        </li>
+    </ul>
+

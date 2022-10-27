@@ -1,0 +1,15 @@
+<hr/>
+<h1>Data Binding in Angular</h1>
+<fieldset>
+<legend>User Login</legend>
+
+User Id  :  <input  [(ngModel)]="uid"   />  
+<br/><br/>
+Password :  <input type="password" [(ngModel)]="pwd"   />  
+<br/><br/>
+<input type="button"  [disabled]="isButtonDisable" value="Login" (click)="isValidUser()" />  
+
+<h3 [ngStyle]="{'color':getColor()}"> {{result}} </h3>
+
+</fieldset>
+<br/>

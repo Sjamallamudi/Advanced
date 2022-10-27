@@ -1,0 +1,24 @@
+<hr/>
+<h1>Simple interest calculator</h1>
+<fieldset [ngStyle]="{'background-color': 'blue', 'color': 'white', 'padding': '10px', 'width': '300px'}">
+    <legend>Calculator</legend>
+    <br/>
+    Principal Amount : <input [(ngModel)]="Pamt" />  
+    <br/><br/>
+    Rate of Interest : <input [(ngModel)]="rate" />  
+    <br/><br/>
+    Time Period(in years): <select [(ngModel)]="time">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select> 
+    <br/><br/>
+    <input type="button" value="Calculate Interest" (click)="SimpleInt()" />  
+    
+    <h3> The simple interest is: {{interest}} </h3>
+        
+</fieldset>
+<br/>
+    
