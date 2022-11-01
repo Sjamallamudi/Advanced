@@ -1,0 +1,46 @@
+{
+  "students": [
+    {
+      "studentId": 1,
+      "name": "Scott",
+      "city": "Hyderabad",
+      "email": "scott@gmail.com",
+      "age": "25"
+    },
+    {
+      "studentId": 4,
+      "name": "Naveen",
+      "city": "Chennai",
+      "email": "naveen@gmail.com",
+      "age": "24"
+    },
+    {
+      "studentId": 5,
+      "name": "Srini",
+      "city": "Hyd",
+      "email": "srini@gmail.com",
+      "age": "22"
+    },
+    {
+      "studentId": 6,
+      "name": "sravya",
+      "city": "nellore",
+      "email": "sravya@gmail.com",
+      "age": "12"
+    },
+    {
+      "studentId": 7,
+      "name": "charmista",
+      "city": "khammam",
+      "email": "charm@gmail.com",
+      "age": "41"
+    },
+    {
+      "studentId": 8,
+      "name": "saba",
+      "city": "hyderabad",
+      "email": "saba@gmail.com",
+      "age": "32"
+    }
+  ]
+}

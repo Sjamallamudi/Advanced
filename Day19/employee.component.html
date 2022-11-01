@@ -1,0 +1,18 @@
+<h1>Angular Programming</h1>
+<input type="button" value="getemployee" (click)="getdata()"><br/><br/>
+<table Border="2" cellspacing="0" width="500">
+    <tr>
+        <th>Eid</th>
+        <th>Name</th>
+        <th>Job</th>
+        <th>Salary</th>
+    </tr>
+     <tr *ngFor="let item of employees">
+        <td>{{item.id}}</td>
+        <td>{{item.ename}}</td>
+        <td>{{item.job}}</td>
+        <td>{{item.salary}}</td>
+    </tr>
+     
+</table>
+<br/>
