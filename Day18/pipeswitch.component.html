@@ -1,0 +1,42 @@
+<hr/>
+<style>
+    .bg1{ background-color :  skyblue;  }
+    .bg2{ background-color :  pink;  }
+    .bg3{ background-color :  lightgreen;  }
+</style>
+<section>
+    <table Border="2" cellspacing="0" cellpadding="5" width="400">
+        <tr class="bg1">
+          <th>S.No</th>
+          <th>Student Name</th>
+          <th>Grade</th>
+        </tr>
+    
+        <tr *ngFor="let item of studentsArray;  let i = index;"
+            [ngClass]="'bg2'">
+          <td> {{i + 1}}</td>
+          <td>{{item.sname}}</td>
+          <td>{{item.Grade}}</td>
+        </tr>
+    
+      </table>
+</section>
+
+<hr/>
+<section>
+    <table Border="2" cellspacing="0" cellpadding="5" width="400">
+        <tr class="bg1">
+          <th>S.No</th>
+          <th>Student Name</th>
+          <th>Grade</th>
+        </tr>
+    
+        <tr *ngFor="let item of studentsArray;  let i = index;"
+            [ngClass]="'bg3'">
+          <td> {{i + 1}}</td>
+          <td>{{item.sname}}</td>
+          <td>{{item.Grade | switchpipe}}</td>
+        </tr>
+    
+      </table>
+</section>

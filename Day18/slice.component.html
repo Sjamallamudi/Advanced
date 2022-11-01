@@ -1,0 +1,11 @@
+<hr/>
+<h3  Align="center">Transforming Data using Pipes in Angular</h3>
+
+<input type="button"  value="Load More" *ngIf="toDisplay" (click)="nextItems()" /> <br/><br/>
+<div *ngFor="let item of Products | slice : start : end " [ngStyle]="{'width': '175px', 'float': 'left', 'background-color': 'wheat', 'margin-left': '20px','margin-top': '25px', 'text-align': 'center', 'font-weight': 'bold', 'padding': '10px'}">
+    <p>Product Id : {{item.id}}</p>
+    <p>Name : {{item.pname}}</p>
+    <p>Price : {{item.price}}</p>
+    <p>Category: {{item.catg}}</p>
+    <p>Quantity : {{item.quant}}</p>
+</div>

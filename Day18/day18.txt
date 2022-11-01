@@ -1,0 +1,10 @@
+1.
+--->To bind the src property of an <img> element to a component's property, place src in square brackets followed by an equal sign and then the property.
+--->ex:src/app/app.component.html: <img alt="item" [src]="itemImageUrl"
+        src/app/app.component.ts : itemImageUrl = '../assets/phone.png';
+
+
+2.--->Angular Decimal Pipe is one of the bulit in pipe in Angular used to format decimal numbers according to the given decimal digits info and locale information.
+
+---> Percent pipe: Transforms a number to a percentage string, formatted according to locale rules that determine group sizing and separator, decimal-point character, and other locale-specific configurations.
+{{ value_expression | percent [ : digitsInfo [ : locale ] ] }}
