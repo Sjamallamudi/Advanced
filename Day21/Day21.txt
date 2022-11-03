@@ -1,0 +1,19 @@
+1.
+  MVC:
+    --->The MVC Framework is an architectural pattern that separates an applications into three main logical components Model, View, and Controller. Hence the abbreviation MVC. The full form MVC is Model View Controller.
+    --->In this architecture, a component is built to handle specific development aspects of an application. MVC separates the business logic and presentation layer from each other. This architectural pattern mainly used for desktop graphical user interfaces (GUIs).
+
+  MVVM:
+    --->MVVM architecture facilitates a separation of development of the graphical user interface with the help of mark-up language or GUI code. The full form of MVVM is Model–View–ViewModel.
+    --->The view model of MVVM is a value converter that means that it is view model’s responsibility for exposing the data objects from the Model in such a way that objects are easily managed and presented.
+
+  Differences:
+    --->MVC framework is an architectural pattern that separates an application into three main logical components Model, View, and Controller. On the other hand, MVVM facilitates a separation of development of the graphical user interface with the help of mark-up language or GUI code
+    --->In MVC, the controller is the entry point to the Application, while in MVVM, the view is the entry point to the Application.
+    --->MVC Model component can be tested separately from the user, while MVVM is easy for separate unit testing, and code is event-driven.
+    --->MVC architecture has “one to many” relationships between Controller & View, while in MVVC architecture, “one to many” relationships between View & View Model.
+
+2.
+    --->The Single Responsibility Principle (SRP) is the concept that any single object in object-oriented programing (OOP) should be made for one specific function.
+    --->SRP is intended to help make code modular with fewer difficulties arising from inter-dependencies. Making code more modular and packaged into functions helps make it more reusable and helps avoid time wasted recoding what has already been done.
+    --->Adoption of SRP is supposed to help when updating code as there are fewer points of concern when a need is found to update a certain function.
